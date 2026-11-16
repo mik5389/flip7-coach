@@ -30,7 +30,7 @@
     .hand{min-height:125px;border:1px dashed #dcd6c9;background:#faf8f1;border-radius:19px;padding:13px;display:flex;align-items:flex-start;gap:9px;overflow:auto}
     .empty{margin:auto;color:#9b9588;font-size:14px;text-align:center}.card{flex:0 0 67px;height:94px;border-radius:13px;padding:8px;position:relative;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:950;box-shadow:0 6px 11px rgba(30,38,60,.12);border:2px solid rgba(0,0,0,.08)}
     .card .mini{position:absolute;top:5px;left:7px;font-size:12px}.card.num{background:#fff;color:var(--navy)}.card.num.high{background:#ffe59a}.card.mod{background:#ffb36c;color:#5d2700;font-size:21px}.card.action{background:#83ddd1;color:#064d48;font-size:13px;text-align:center;line-height:1.05}.card.sc{background:#c7b9ff;color:#392580;font-size:12px;text-align:center}.card.used{opacity:.35;filter:grayscale(.4)}
-    .score-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:13px 0 18px}.stat{background:#f6f7f8;border-radius:15px;padding:12px}.stat label{display:block;color:var(--muted);font-size:11px;font-weight:750;text-transform:uppercase;letter-spacing:.6px}.stat b{display:block;font-size:24px;margin-top:2px}.stat b.small{font-size:17px;margin-top:6px}
+    .score-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:13px 0 18px}.stat{background:#f6f7f8;border-radius:15px;padding:12px}.stat label{display:block;color:var(--muted);font-size:11px;font-weight:750;text-transform:uppercase;letter-spacing:.6px}.stat b{display:block;font-size:24px;margin-top:2px}.stat b.small{font-size:17px;margin-top:6px}.total-input{display:block;width:100%;border:0;border-bottom:2px solid #d9dde3;background:transparent;color:var(--navy);font-size:24px;font-weight:950;padding:1px 0 0;outline:none}.total-input:focus{border-color:var(--teal)}.round-pill{background:#fff1c0;color:#7a5900;border-radius:999px;padding:8px 11px;font-size:12px;font-weight:900;white-space:nowrap}
     .picker-title{display:flex;align-items:end;justify-content:space-between;gap:10px;margin:0 2px 10px}.picker-title h2{font-size:16px;margin:0}.picker-title span{color:var(--muted);font-size:12px}
     .number-grid{display:grid;grid-template-columns:repeat(13,1fr);gap:6px}.pick{border:0;border-radius:11px;min-height:48px;background:#f3f0e7;color:var(--ink);font-weight:900;position:relative}.pick:hover:not(:disabled){background:var(--yellow);transform:translateY(-2px)}.pick .left{display:block;font-size:9px;color:var(--muted);font-weight:700}.pick:disabled{opacity:.28;cursor:not-allowed}.special-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:7px}.pick.special{background:#e3f7f3;font-size:11px;padding:7px 4px}.pick.modifier{background:#fff0df}.pick.chance{background:#eee9ff}
     .advice{padding:18px;position:sticky;top:14px}.eyebrow{text-transform:uppercase;letter-spacing:1.5px;font-weight:900;color:var(--muted);font-size:10px}.verdict{border-radius:21px;margin:8px 0 14px;padding:18px;color:#fff;position:relative;overflow:hidden}.verdict.hit{background:linear-gradient(135deg,#0b8e80,#29c7b2)}.verdict.stay{background:linear-gradient(135deg,#ef6a38,#ff9d4f)}.verdict.out{background:linear-gradient(135deg,#667085,#98a2b3)}
@@ -40,14 +40,15 @@
     .deck{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}.deck-line{display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px}.deck-bar{height:8px;background:#ece9e2;border-radius:99px;overflow:hidden}.deck-bar i{display:block;height:100%;background:var(--navy);border-radius:99px}.note{font-size:10px;color:var(--muted);line-height:1.45;margin:11px 2px 0}.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,20px);background:var(--navy);color:#fff;padding:10px 15px;border-radius:999px;font-size:12px;font-weight:750;opacity:0;pointer-events:none;transition:.2s;z-index:9}.toast.show{opacity:1;transform:translate(-50%,0)}
     .modal{position:fixed;inset:0;background:rgba(17,30,50,.45);display:none;place-items:center;padding:20px;z-index:10}.modal.open{display:grid}.modal-card{background:#fff;border-radius:24px;padding:22px;max-width:440px;width:100%;box-shadow:var(--shadow)}.modal-card h2{margin:0 0 8px}.modal-card p,.modal-card li{color:var(--muted);font-size:13px;line-height:1.5}.modal-card ul{padding-left:20px}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}
     @media(max-width:820px){.layout{grid-template-columns:1fr}.advice{position:static;order:-1}.number-grid{grid-template-columns:repeat(7,1fr)}.special-grid{grid-template-columns:repeat(2,1fr)}header{align-items:flex-start}.sub{display:none}}
-    @media(max-width:480px){.app{padding:12px}.players,.advice{padding:13px;border-radius:20px}.score-row{gap:6px}.stat{padding:9px}.stat b{font-size:20px}.header-actions .btn:first-child{display:none}.logo{font-size:20px}.verdict h2{font-size:34px}}
+    @media(max-width:580px){.score-row{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.app{padding:12px}.players,.advice{padding:13px;border-radius:20px}.score-row{gap:6px}.stat{padding:9px}.stat b{font-size:20px}.header-actions .btn:first-of-type{display:none}.logo{font-size:20px}.verdict h2{font-size:34px}}
   </style>
 </head>
 <body>
 <div class="app">
   <header>
     <div class="brand"><div class="logo">FLIP 7</div><div><h1>Table Coach</h1><div class="sub">Track the shoe. Know the risk. Make the call.</div></div></div>
-    <div class="header-actions"><button class="btn" id="helpBtn">How it works</button><button class="btn" id="undoBtn">↶ Undo</button><button class="btn primary" id="addPlayerBtn">+ Player</button></div>
+    <div class="header-actions"><span class="round-pill" id="roundPill">Round 1</span><button class="btn" id="helpBtn">How it works</button><button class="btn" id="undoBtn">↶ Undo</button><button class="btn primary" id="addPlayerBtn">+ Player</button></div>
   </header>
   <main class="layout">
     <section class="panel players">
@@ -59,6 +60,7 @@
       <div class="hand" id="hand"></div>
       <div class="score-row">
         <div class="stat"><label>Bank now</label><b id="scoreNow">0</b></div>
+        <div class="stat"><label>Game total</label><input class="total-input" id="totalScore" type="number" min="0" step="1" value="0" aria-label="Game total"></div>
         <div class="stat"><label>Unique numbers</label><b id="uniqueCount">0 / 7</b></div>
         <div class="stat"><label>Protection</label><b class="small" id="protection">None</b></div>
       </div>
@@ -87,7 +89,7 @@
   </main>
 </div>
 <div class="toast" id="toast"></div>
-<div class="modal" id="helpModal"><div class="modal-card"><h2>Quick setup</h2><ul><li>Select a player, then tap every card revealed for them.</li><li>Tap a player’s status to cycle Active → Stayed → Busted.</li><li><b>New round</b> clears hands but keeps those cards out of the draw pile.</li><li><b>Reshuffle</b> starts a fresh 94-card shoe.</li><li>For action cards, add the card to the player affected. Mark a frozen player as Stayed.</li></ul><p><b>Hit once</b> is the average value of every possible next card, after which you can decide again. With Second Chance, a duplicate consumes it instead of busting.</p><div class="modal-actions"><button class="btn primary" id="closeHelp">Got it</button></div></div></div>
+<div class="modal" id="helpModal"><div class="modal-card"><h2>Quick setup</h2><ul><li>Select a player, then tap every card revealed for them.</li><li>Tap a player’s status to cycle Active → Stayed → Busted.</li><li><b>New round</b> automatically adds every player’s round score to their game total, then clears the hands.</li><li>Click a player’s <b>Game total</b> number if you ever need to correct it manually.</li><li><b>Reshuffle</b> starts a fresh 94-card shoe without changing game totals.</li><li>For action cards, add the card to the player affected. Mark a frozen player as Stayed.</li></ul><p><b>Hit once</b> is the average value of every possible next card, after which you can decide again. With Second Chance, a duplicate consumes it instead of busting.</p><div class="modal-actions"><button class="btn primary" id="closeHelp">Got it</button></div></div></div>
 <div class="modal" id="confirmModal"><div class="modal-card"><h2 id="confirmTitle">Are you sure?</h2><p id="confirmText"></p><div class="modal-actions"><button class="btn" id="cancelConfirm">Cancel</button><button class="btn danger" id="doConfirm">Confirm</button></div></div></div>
 <script>
 (()=>{
@@ -96,9 +98,9 @@
   DECK.freeze=3;DECK.flip3=3;DECK.chance=3;
   const LABEL={freeze:'FREEZE',flip3:'FLIP THREE',chance:'SECOND CHANCE',x2:'×2'};
   const SPECIALS=['+2','+4','+6','+8','+10','x2','chance','freeze','flip3'];
-  const fresh=()=>({players:[{id:crypto.randomUUID(),name:'You',cards:[],status:'active'},{id:crypto.randomUUID(),name:'Player 2',cards:[],status:'active'},{id:crypto.randomUUID(),name:'Player 3',cards:[],status:'active'},{id:crypto.randomUUID(),name:'Player 4',cards:[],status:'active'}],selected:null,discard:[],history:[]});
+  const fresh=()=>({players:[{id:crypto.randomUUID(),name:'You',cards:[],status:'active',total:0},{id:crypto.randomUUID(),name:'Player 2',cards:[],status:'active',total:0},{id:crypto.randomUUID(),name:'Player 3',cards:[],status:'active',total:0},{id:crypto.randomUUID(),name:'Player 4',cards:[],status:'active',total:0}],selected:null,discard:[],history:[],round:1,roundLog:[]});
   let state; try{state=JSON.parse(localStorage.getItem('flip7-coach'))||fresh()}catch{state=fresh()}
-  if(!state.players?.length) state=fresh(); if(!state.selected) state.selected=state.players[0].id;
+  if(!state.players?.length) state=fresh(); if(!state.selected) state.selected=state.players[0].id;if(!state.round)state.round=1;if(!state.roundLog)state.roundLog=[];state.players.forEach(p=>{if(!Number.isFinite(Number(p.total)))p.total=0;else p.total=Number(p.total)});
   const $=s=>document.querySelector(s), tabs=$('#tabs'),hand=$('#hand'),numbers=$('#numbers'),specials=$('#specials');
   const selected=()=>state.players.find(p=>p.id===state.selected)||state.players[0];
   const allSeen=()=>[...state.discard,...state.players.flatMap(p=>p.cards)];
@@ -124,10 +126,10 @@
     } return ev;
   }
   function render(){const p=selected(),r=remaining(),left=total(r),current=score(p),held=[...new Set(nums(p))];
-    tabs.innerHTML=state.players.map(x=>`<button class="player-tab ${x.id===p.id?'active':''} ${x.status!=='active'?'out':''}" data-id="${x.id}"><b><i class="dot"></i>${esc(x.name)}</b><small>${score(x)} pts · ${new Set(nums(x)).size} numbers</small></button>`).join('');
+    tabs.innerHTML=state.players.map(x=>`<button class="player-tab ${x.id===p.id?'active':''} ${x.status!=='active'?'out':''}" data-id="${x.id}"><b><i class="dot"></i>${esc(x.name)}</b><small>${x.total} total · ${score(x)} this round</small></button>`).join('');
     [...tabs.children].forEach(b=>b.onclick=()=>{state.selected=b.dataset.id;save();render()});
     $('#nameInput').value=p.name;$('#pickerFor').textContent='to '+p.name;hand.innerHTML=p.cards.length?p.cards.map(cardHTML).join(''):'<div class="empty">No cards yet.<br>Select a card below to begin.</div>';
-    $('#scoreNow').textContent=current;$('#uniqueCount').textContent=held.length+' / 7';$('#protection').textContent=hasChance(p)?'Second Chance':'None';
+    $('#scoreNow').textContent=current;$('#totalScore').value=p.total;$('#uniqueCount').textContent=held.length+' / 7';$('#protection').textContent=hasChance(p)?'Second Chance':'None';$('#roundPill').textContent='Round '+state.round;
     const st=$('#statusBtn');st.className='status '+p.status;st.textContent=p.status==='active'?'● Active':p.status==='stayed'?'■ Stayed':'× Busted';
     numbers.innerHTML=Array.from({length:13},(_,n)=>{const c='n'+n,k=Math.max(0,r[c]||0);return `<button class="pick" data-card="${c}" ${!k?'disabled':''}>${n}<span class="left">${k} left</span></button>`}).join('');
     specials.innerHTML=SPECIALS.map(c=>{const k=Math.max(0,r[c]||0),cls=c==='chance'?'chance':(/^\+/.test(c)||c==='x2'?'modifier':'');return `<button class="pick special ${cls}" data-card="${c}" ${!k?'disabled':''}>${LABEL[c]||c}<span class="left">${k} left</span></button>`}).join('');
@@ -149,10 +151,11 @@
   $('#nameInput').oninput=e=>{selected().name=e.target.value||'Player';save();renderTabsOnly()};
   function renderTabsOnly(){const p=selected();[...tabs.children].forEach((b,i)=>{const x=state.players[i];b.querySelector('b').innerHTML=`<i class="dot"></i>${esc(x.name)}`});$('#pickerFor').textContent='to '+p.name}
   $('#statusBtn').onclick=()=>{const p=selected(),order=['active','stayed','busted'];p.status=order[(order.indexOf(p.status)+1)%3];save();render()};
-  $('#undoBtn').onclick=undo;$('#addPlayerBtn').onclick=()=>{const p={id:crypto.randomUUID(),name:'Player '+(state.players.length+1),cards:[],status:'active'};state.players.push(p);state.selected=p.id;save();render()};
+  $('#totalScore').onchange=e=>{selected().total=Math.max(0,Math.round(Number(e.target.value)||0));save();render()};
+  $('#undoBtn').onclick=undo;$('#addPlayerBtn').onclick=()=>{const p={id:crypto.randomUUID(),name:'Player '+(state.players.length+1),cards:[],status:'active',total:0};state.players.push(p);state.selected=p.id;save();render()};
   $('#removePlayerBtn').onclick=()=>confirmBox('Remove '+selected().name+'?', 'Their revealed cards will stay out of the draw pile for this shoe.',()=>{const p=selected();state.discard.push(...p.cards);state.players=state.players.filter(x=>x.id!==p.id);state.selected=state.players[0].id;state.history=[];save();render()});
-  $('#newRoundBtn').onclick=()=>confirmBox('Start a new round?','Current hands move to the discard pile. The remaining draw pile stays in play.',()=>{state.players.forEach(p=>{state.discard.push(...p.cards);p.cards=[];p.status='active'});state.history=[];save();render();toast('New round started')});
-  $('#reshuffleBtn').onclick=()=>confirmBox('Reshuffle the full deck?','This clears all hands and restores the complete 94-card deck.',()=>{state.discard=[];state.players.forEach(p=>{p.cards=[];p.status='active'});state.history=[];save();render();toast('Fresh 94-card shoe')});
+  $('#newRoundBtn').onclick=()=>confirmBox('Bank Round '+state.round+' and continue?','Every player’s current round score will be added to their game total. Busted players add 0.',()=>{const finished=state.round,entry={round:finished,scores:[]};state.players.forEach(p=>{const earned=score(p);p.total+=earned;entry.scores.push({id:p.id,name:p.name,points:earned,total:p.total});state.discard.push(...p.cards);p.cards=[];p.status='active'});state.roundLog.push(entry);state.round++;state.history=[];save();render();toast('Round '+finished+' banked')});
+  $('#reshuffleBtn').onclick=()=>confirmBox('Start a fresh shoe?','This clears current hands and restores the 94-card deck. Game totals will not change.',()=>{state.discard=[];state.players.forEach(p=>{p.cards=[];p.status='active'});state.history=[];save();render();toast('Fresh 94-card shoe')});
   function confirmBox(title,text,fn){$('#confirmTitle').textContent=title;$('#confirmText').textContent=text;$('#confirmModal').classList.add('open');$('#doConfirm').onclick=()=>{$('#confirmModal').classList.remove('open');fn()}}
   $('#cancelConfirm').onclick=()=>$('#confirmModal').classList.remove('open');$('#helpBtn').onclick=()=>$('#helpModal').classList.add('open');$('#closeHelp').onclick=()=>$('#helpModal').classList.remove('open');
   document.querySelectorAll('.modal').forEach(m=>m.onclick=e=>{if(e.target===m)m.classList.remove('open')});
